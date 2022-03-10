@@ -48,6 +48,10 @@ Pre-requisites: python3.7 or higher, docker
     uvicorn app:app --reload --app-dir rest_api/
     ```
 
+    You can also access the REST API by visiting [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs) in your web browser.
+
+    ![REST API web ui](/images/api.png)
+
 ## Start the Streamlit Web Interface
 
 1. Streamlit is a lightweight package used for creating simple web applications. Run the following in a new terminal:
