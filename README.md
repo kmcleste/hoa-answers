@@ -8,6 +8,8 @@ This project functions as a proof-of-concept and its larger goal is to facilitat
 - Docker
 - Elasticsearch
 
+The data used in this project is based on my neighborhoods HOA covenants and bylaws. The provided document is a pdf of scanned images; the pdf pages are converted into individual images, then these images are converted to text using [pytesseract](https://pypi.org/project/pytesseract/). No further processing was done on the documents.
+
 ## Project Setup
 
 Pre-requisites: python3.7 or higher, docker
