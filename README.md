@@ -1,5 +1,13 @@
 # HOA Question-Answer System
 
+This project functions as a proof-of-concept and its larger goal is to facilitate learning. Concepts reinforced by this project are:
+
+- FastAPI/REST API
+- Haystack Neural Search
+- Streamlit Web Applications
+- Docker
+- Elasticsearch
+
 ## Project Setup
 
 Pre-requisites: python3.7 or higher, docker
