@@ -42,7 +42,6 @@ elasticsearch==7.10.0
 en-core-web-sm @ https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.2.0/en_core_web_sm-3.2.0-py3-none-any.whl
 entrypoints==0.4
 executing==0.8.2
--e git+https://github.com/deepset-ai/haystack.git@a5501c72cf717396cd1b5238bddcc6ce00cba490#egg=farm_haystack
 fastapi==0.75.0
 filelock==3.6.0
 Flask==2.0.3
