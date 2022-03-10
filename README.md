@@ -78,6 +78,4 @@ Pre-requisites: python3.7 or higher, docker
 
 - This entire system is built upon compounding errors.
   
-- Each page of the pdf was converted to an image, each image was then converted to text using pdf2text and pytesseract.
-  
 - This is not meant to be treated as "definitive fact". Rather, it can be used to get a general idea of policies listed in the document.
