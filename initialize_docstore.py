@@ -1,15 +1,11 @@
-import os
-import re
-import logging
+#!/.venv/bin/python
+
 from typing import Optional
 
 import docker
 
 from haystack.document_stores import ElasticsearchDocumentStore
-from haystack.nodes import ElasticsearchRetriever
-from haystack.pipelines import ExtractiveQAPipeline
-from haystack.nodes import FARMReader, TransformersReader
-from haystack.utils import print_answers, convert_files_to_dicts, launch_es
+from haystack.utils import convert_files_to_dicts, launch_es
 
 def is_container_running(container_name: str) -> Optional[bool]:
     """Verify the status of a container by it's name
@@ -43,26 +39,8 @@ def create_es_connection():
     )
     return document_store
 
-def create_retriever(document_store):
-    return ElasticsearchRetriever(document_store=document_store)
-
-def create_reader(model: str, gpu: bool):
-    return FARMReader(model_name_or_path=model, use_gpu=gpu)
-
-def create_prediction(pipe, query: str):
-    prediction = pipe.run(query=query, params={
-        "Retriever":{
-            "top_k":10
-        }, 
-        "Reader":{
-            "top_k": 3
-        }
-    })
-    return prediction
-
 
 def main():
-    logger = logging.getLogger(__name__)
     path = 'data/text'
     container_name = 'elasticsearch'
 
@@ -80,19 +58,6 @@ def main():
 
     # Write docs to document store
     document_store.write_documents(dicts)
-
-    retriever = create_retriever(document_store)
-    reader = create_reader(model='deepset/roberta-base-squad2', gpu=False)
-    pipe = ExtractiveQAPipeline(reader, retriever)
-
-    stop = False
-    while stop == False:
-        query = input("Enter your query: ")
-        if query == '/stop':
-            stop = True
-        else:
-            prediction = create_prediction(pipe=pipe, query=query)
-            print_answers(prediction, details='minimum')
 
 
 if __name__ == "__main__":
