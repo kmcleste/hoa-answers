@@ -10,8 +10,7 @@ from haystack import __version__
 from haystack.document_stores import ElasticsearchDocumentStore
 from haystack.nodes import ElasticsearchRetriever
 from haystack.pipelines import ExtractiveQAPipeline
-from haystack.nodes import FARMReader, TransformersReader
-from haystack.utils import print_answers
+from haystack.nodes import FARMReader
 
 def create_es_connection():
     # Connect to ElasticSearch
