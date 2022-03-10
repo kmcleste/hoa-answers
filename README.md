@@ -30,6 +30,14 @@ Pre-requisites: python3.7 or higher, docker
     python3 -m pip install -r requirements.txt
     ```
 
+    To install Haystack, you must do so from source. First clone the their github to your local machine (**NOT** in this folder) and install using pip:
+
+     ```bash
+     git clone https://github.com/deepset-ai/haystack.git
+     cd haystack
+     python3 -m pip install -e '.[all]'
+     ```
+
 ## Initialize the Document Store
 
 1. To start the docker container that will store all of our files, run the following:
