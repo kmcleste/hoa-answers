@@ -63,7 +63,7 @@ def create_prediction(pipe, query: str):
 
 def main():
     logger = logging.getLogger(__name__)
-    path = '/Users/kmclester/Documents/hoa-topics/text'
+    path = 'data/text'
     container_name = 'elasticsearch'
 
     if is_container_running(container_name=container_name):
