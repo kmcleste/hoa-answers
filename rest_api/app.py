@@ -6,7 +6,7 @@ __date__ = "2022/03/10"
 from fastapi import FastAPI
 from pydantic import BaseModel, validator
 
-import haystack
+from haystack import __version__
 from haystack.document_stores import ElasticsearchDocumentStore
 from haystack.nodes import ElasticsearchRetriever
 from haystack.pipelines import ExtractiveQAPipeline
@@ -64,7 +64,7 @@ def haystack_version() -> dict:
     """
     Returns the current version of Haystack used in the QA System
     """
-    return {"version": haystack.__version__}
+    return {"version": __version__}
 
 class Query(BaseModel):
     query: str
