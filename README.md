@@ -52,7 +52,7 @@ Pre-requisites: python3.7 or higher, docker
 
 ## Start the REST API
 
-1. To start the API service. fun the following:
+1. To start the API service. run the following:
 
     ```bash
     uvicorn app:app --reload --app-dir rest_api/
