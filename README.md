@@ -39,6 +39,9 @@ Pre-requisites: python3.7 or higher, docker
      cd haystack
      python3 -m pip install -e '.[all]'
      ```
+## System Flow
+
+[![](https://mermaid.ink/img/pako:eNo9j91qwzAMhV8l6CqB-gVSGKQ_o4VdlKV3cS-ErS2msZ3JykYpffc5JZuuDtJ3jqQ7mGgJavhkHPvi7X2tQ5GrKctWmNAPTqpKqcP5fCqYviZKotTLpnvFJM3pWDwHLfE38eUfS2MMiTLXLHEbpZ5WF0PubrsD3pKguWYLhvRDPGcu7DbrXVfuh7zBmZaQTV9dZtsaVuCJPTqbL77PuAbpyZOGOkuLfNWgwyNz02hRaG-dRIb6A4dEK8BJYnsLBmrhif6gncP8vV-oxy-oaVjr)](https://mermaid.live/edit#pako:eNo9j91qwzAMhV8l6CqB-gVSGKQ_o4VdlKV3cS-ErS2msZ3JykYpffc5JZuuDtJ3jqQ7mGgJavhkHPvi7X2tQ5GrKctWmNAPTqpKqcP5fCqYviZKotTLpnvFJM3pWDwHLfE38eUfS2MMiTLXLHEbpZ5WF0PubrsD3pKguWYLhvRDPGcu7DbrXVfuh7zBmZaQTV9dZtsaVuCJPTqbL77PuAbpyZOGOkuLfNWgwyNz02hRaG-dRIb6A4dEK8BJYnsLBmrhif6gncP8vV-oxy-oaVjr)
 
 ## Initialize the Document Store
 
@@ -52,7 +55,7 @@ Pre-requisites: python3.7 or higher, docker
 
 ## Start the REST API
 
-1. To start the API service. fun the following:
+1. To start the API service. run the following:
 
     ```bash
     uvicorn app:app --reload --app-dir rest_api/
