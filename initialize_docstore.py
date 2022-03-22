@@ -1,6 +1,7 @@
 #!/.venv/bin/python
 
 from typing import Optional
+from time import sleep
 
 import docker
 
@@ -49,6 +50,7 @@ def main():
     else:
         # Launch ElasticSearch document store
         launch_es()
+        sleep(15)
 
     # Create Document Store connection
     document_store = create_es_connection()
